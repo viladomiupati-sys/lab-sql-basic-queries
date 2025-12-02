@@ -1,3 +1,6 @@
+-- 1. 
+SHOW TABLES;
+
 -- 2. Retrieve all the data from the tables actor, film and customer.
 SELECT *
 FROM actor; 
@@ -27,11 +30,11 @@ FROM film;
 
 -- 5. 
 -- 5.1
-SELECT COUNT(store_id) AS count_stores
+SELECT COUNT(DISTINCT store_id) AS count_stores
 FROM store;
 
 -- 5.2 
-SELECT COUNT(staff_id) AS count_staff
+SELECT COUNT(DISTINCT staff_id) AS count_staff
 FROM staff;
 
 -- 5.3 
@@ -44,7 +47,7 @@ SELECT COUNT(DISTINCT last_name) AS count_last_name
 FROM actor;
 
 -- 6. 
-SELECT title, length
+SELECT title
 FROM film
 ORDER BY length DESC
 LIMIT 10;
